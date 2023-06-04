@@ -1,46 +1,71 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
 <head>
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible">
       <meta name="viewport" content="width = device-width, initial-scale=1.0">
       <title>Mou Saha - Portfolio</title>
       <link rel="stylesheet" href="CSS\style.css">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-
-
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>   
 
 <body>
-  <div class = "hero">
-    <div class="container">
-      <div class="images">
-        <img src="images\mou_saha-removebg.png" class="girl">
-      </div>
-      <nav>
-        <ul>
-          <li><a href="#">HOME</a></li>
-          <li><a href="#">ABOUT</a></li>
-          <li><a href="#">PORTFOLIO</a></li>
-          <li><a href="#">SERVICES</a></li>
-          <li><a href="#">HIRE ME</a></li>
+  <!-- Navigation bar -->
+  <header>
+    <div class="navbar">
+        <ul class="links">
+            <li><a href="HOME">HOME</a></li>
+            <li><a href="ABOUT">ABOUT</a></li>
+            <li><a href="PORTFOLIO">PORTFOLIO</a></li>
+            <li><a href="SERVICES">SERVICES</a></li>
+            <li><a href="HIRE ME">HIRE ME</a></li>
         </ul>
-      </nav>
-      <div class ="detail">
-          <h1>I'm <span>Mou</span> Saha</h1>
-          <p>
-            Business Intelligence Analyst
-          </p>
-          <p>
-            <a href="https://github.com/Mou-Saha"><i class="fa fa-github fa-2x fa_custom"></i></a>
-          </p>
-          <a href="#" class="download">DOWNLOAD CV</a>
-      </div>   
-    </div>
+        <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="dropdown_menu">
+            <li><a href="HOME">HOME</a></li>
+            <li><a href="ABOUT">ABOUT</a></li>
+            <li><a href="PORTFOLIO">PORTFOLIO</a></li>
+            <li><a href="SERVICES">SERVICES</a></li>
+            <li><a href="HIRE ME">HIRE ME</a></li>
+        </div>
+      </div>
+  </header>
+  <script>
+      const toggleBtn = document.querySelector('.toggle_btn')
+      const toggleBtnIcon = document.querySelector('.toggle_btn i')
+      const dropdownmenu = document.querySelector('.dropdown_menu')
 
-  </div>
+      toggleBtn.onclick = function(){
+          dropdownmenu.classList.toggle('open')
+          const isOpen = dropdownmenu.classList.contains('open')
+          toggleBtnIcon.classList = isOpen
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars"
+      }
+  </script>
+  <main>
+      <div class="container">
+        <div class="images">
+          <img src="images\mou_saha-removebg.png" class="girl">
+        </div>
+        <div class ="detail">
+            <h1>I'm <span>Mou</span> Saha</h1>
+            <p>
+              Business Intelligence Analyst
+            </p>
+            <p>
+              <a href="https://github.com/Mou-Saha" target="_blank"><i class="fa-brands fa-github fa_custom"></i></a>
+              <a href="https://www.linkedin.com/in/mou-saha-17070b111/" target="_blank"><i class="fa-brands fa-linkedin fa_custom"></i></a>
+              <a href="https://www.facebook.com/mou.saha.35" target="_blank"><i class="fa-brands fa-facebook fa_custom"></i></a>
+            </p>
+            <a href="#" class="download">DOWNLOAD CV</a>
+        </div>   
+      </div>
+    </div>
+  </main>
 </body>
 <!-- <body>
 

@@ -1,39 +1,100 @@
+:root{
+    --white: #f9f9f9;
+    --black: #36383F;
+    --gray: #eff4fd;
+    --orange :rgb(227, 145, 23);
+} /* variables*/
+
 *{
     margin :0;
     padding: 0;
     font-family:'Poppins',sans-serif;
+    box-sizing: border-box;
 }
 
-.hero{
-    position: relative;
-    width: 100%;
+body{
+    background-color: var(--gray);
+    font-family: "Poppins", sans-serif;
     height: 100vh;
-    background: #eff4fd ;
-  }
+}
 
- nav{
+header{
+    background-color: var(--black);
+    box-shadow: 1px 1px 5px 0px var(--gray);
+    position: relative;
+    padding: 0 2rem;
+    /* top: 0;
+    width: 100%;
+    height: 60px; */
+}
+
+/* Nav menu */
+.navbar{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    width: 84%;
-    margin: auto;
-    padding: 20px 0;
     align-items: center;
-    justify-content: space-between;
-    margin-left: 45%;
- }
-
- nav ul li{
+    justify-content: end;
+}
+.navbar .links{
+    display: flex;
+    gap: 1rem;
+}
+.navbar ul li{
     display: inline-block;
     list-style: none;
     margin: 10px 20px;
  }
-
- nav ul li a{
+.navbar ul li a{
     text-decoration: none;
-    color: #080808;
+    color: var(--white);
     font-weight: bold;
 }
-nav ul li a:hover{
+.navbar ul li a:hover{
     color: rgb(73, 158, 73);
+}
+.navbar .toggle_btn{
+    cursor: pointer;
+    display: none;
+    color: var(--white);
+}
+.dropdown_menu{
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0px;
+    width: 100px;
+    background: rgba(255, 255, 255,0.1);
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown_menu.open{
+    height: 240px;
+}
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+.dropdown_menu li a{
+    text-decoration: none;
+    /* color: var(--white);
+    font-weight: bold; */
+}
+@media(max-width :900px){
+    .navbar .links{
+        display: none;
+    }
+    .navbar .toggle_btn{
+        display: block;
+    }
+    .dropdown_menu{
+        display: block;
+    }
 }
 
 .detail{
@@ -80,5 +141,7 @@ span{
 }
 
 .fa_custom {
-    color:  #00080a
+    color:  #00080a;
+    padding: 0 0.2rem;
+    
 }

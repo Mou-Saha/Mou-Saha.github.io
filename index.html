@@ -1,208 +1,265 @@
 <!DOCTYPE html>
-
 <html lang="en">
+
 <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible">
-      <meta name="viewport" content="width = device-width, initial-scale=1.0">
-      <title>Mou Saha - Portfolio</title>
-      <link rel="stylesheet" href="CSS\style.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>   
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>My Website</title>
+</head>
 
 <body>
-  <!-- Navigation bar -->
-  <header>
-    <div class="navbar">
-        <ul class="links">
-            <li><a href="HOME">HOME</a></li>
-            <li><a href="ABOUT">ABOUT</a></li>
-            <li><a href="PORTFOLIO">PORTFOLIO</a></li>
-            <li><a href="SERVICES">SERVICES</a></li>
-            <li><a href="HIRE ME">HIRE ME</a></li>
-        </ul>
-        <div class="toggle_btn">
-            <i class="fa-solid fa-bars"></i>
+  <!-- Header -->
+  <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <h1><span>M</span>ou <span>S</span>aha</h1>
+          </a>
         </div>
-        <div class="dropdown_menu">
-            <li><a href="HOME">HOME</a></li>
-            <li><a href="ABOUT">ABOUT</a></li>
-            <li><a href="PORTFOLIO">PORTFOLIO</a></li>
-            <li><a href="SERVICES">SERVICES</a></li>
-            <li><a href="HIRE ME">HIRE ME</a></li>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="#hero" data-after="Home">Home</a></li>
+            <li><a href="#services" data-after="Service">Services</a></li>
+            <li><a href="#projects" data-after="Projects">Projects</a></li>
+            <li><a href="#about" data-after="About">About</a></li>
+            <li><a href="#contact" data-after="Contact">Contact</a></li>
+          </ul>
         </div>
-      </div>
-  </header>
-  <script>
-      const toggleBtn = document.querySelector('.toggle_btn')
-      const toggleBtnIcon = document.querySelector('.toggle_btn i')
-      const dropdownmenu = document.querySelector('.dropdown_menu')
-
-      toggleBtn.onclick = function(){
-          dropdownmenu.classList.toggle('open')
-          const isOpen = dropdownmenu.classList.contains('open')
-          toggleBtnIcon.classList = isOpen
-          ? "fa-solid fa-xmark"
-          : "fa-solid fa-bars"
-      }
-  </script>
-  <main>
-      <div class="container">
-        <div class="images">
-          <img src="images\mou_saha-removebg.png" class="girl">
-        </div>
-        <div class ="detail">
-            <h1>I'm <span>Mou</span> Saha</h1>
-            <p>
-              Business Intelligence Analyst
-            </p>
-            <p>
-              <a href="https://github.com/Mou-Saha" target="_blank"><i class="fa-brands fa-github fa_custom"></i></a>
-              <a href="https://www.linkedin.com/in/mou-saha-17070b111/" target="_blank"><i class="fa-brands fa-linkedin fa_custom"></i></a>
-              <a href="https://www.facebook.com/mou.saha.35" target="_blank"><i class="fa-brands fa-facebook fa_custom"></i></a>
-            </p>
-            <a href="#" class="download">DOWNLOAD CV</a>
-        </div>   
       </div>
     </div>
-  </main>
-</body>
-<!-- <body>
-
-  <header>
-    <nav>
-    <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#work">Work Experience</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-    </nav>
-  </header>
-      <div class="container">
-        <div class="header">
-          <h1>Mou Saha</h1>
-          <p>Trierer straße 327, Koblenz 56072, Germany<br>
-            +49 157 580 768 78<br>
-            mousaha695@gmail.com</p>
-        </div>
-        <div class="profile">
-          <img src="images\mou_saha.jpg" alt="Profile Picture">
-          <div class="profile-info">    
+  </section>
+  <!-- End Header -->
 
 
-    <section id="hero">
-        <h1>Mou Saha</h1>
-        <h2>Data Analyst | Software Engineer</h2>
-    </section>
-    <section id="about">
-        <div class="container">
-        <h2>About Me</h2>
-        <p>
-            I am a highly skilled data analyst and software engineer with experience in developing customized solutions using Power BI, Python, SQL, and ETL tools to meet client needs. I have a Master's degree in Web and Data Science from the University of Koblenz and Landau in Germany, and a Bachelor's degree in Computer Science from Maulana Abdul Kalam Azad University of Technology in India.
-        </p>
-        </div>
-    </section>
-    <section id="work">
-        <div class="container">
-        <h2>Work Experience</h2>
-        <div class="job">
-            <h3>Associate Consultant - Data Analytics</h3>
-            <h4>reeeliance IM GmbH, Berlin, Germany</h4>
-            <p>
-            March 2023 - Present
-            </p>
-            <ul>
-            <li>Collaborated with cross-functional teams to gather and analyze business requirements, and developed customized solutions using Power BI, Python, SQL, and ETL tools to meet client needs.</li>
-            </ul>
-        </div>
-        <div class="job">
-            <h3>Working Student</h3>
-            <h4>reeeliance IM GmbH, Berlin, Germany</h4>
-            <p>
-            April 2022 - February 2023
-            </p>
-            <ul>
-            <li>Developed Power BI reports extracting data from SQL Server and Salesforce, and implemented testing with Python in between data source and ETL.</li>
-            </ul>
-        </div>
-        <div class="job">
-            <h3>Research and Teaching Assistant</h3>
-            <h4>University of Koblenz and Landau (Machine Learning and Data Mining)</h4>
-            <p>
-            Nov 2022 - Feb 2023
-            </p>
-            <ul>
-            <li>Coordinated lessons, helped with assignments, evaluation, and marking as a teaching assistant.</li>
-            </ul>
-        </div>
-        <div class="job">
-            <h3>Software Engineer</h3>
-            <h4>Walmart Global Tech - Tamil Nadu, India</h4>
-            <p>
-            June 2020 - October 2021
-            </p>
-            <ul>
-            <li>Developed Power BI analytical reports, modeled and implemented row level security, and published to web with scheduled refresh to reduce operational expenses as part of the company's financial strategy. Maintained large databases and configured services to reduce software maintenance expenses decreasing cost by 10 percentage.</li>
-            </ul>
+  <!-- Hero Section  -->
+  <section id="hero">
+    <div class="hero container">
+      <div>
+        <h1>Hello, <span></span></h1>
+        <h1>My Name is <span></span></h1>
+        <h1>Mou <span></span></h1>
+        <a href="#projects" type="button" class="cta">Portfolio</a>
+      </div>
+    </div>
+  </section>
+  <!-- End Hero Section  -->
 
-            <h2>About Me</h2>
-            <p>I am a highly motivated and creative web developer with a passion for creating aesthetically pleasing and user-friendly websites. I have experience in front-end development using HTML, CSS, and JavaScript, and I am constantly seeking new ways to improve my skills and stay up-to-date with the latest web development trends.</p>
-          </div>
+  <!-- Service Section -->
+  <section id="services">
+    <div class="services container">
+      <div class="service-top">
+        <h1 class="section-title">Serv<span>i</span>ces</h1>
+        <p>As a skilled BI/Data Analyst, I offer a range of services to help businesses harness the power of data and gain valuable insights. Through my expertise in data analysis, visualization, and reporting, I assist organizations in making data-driven decisions and optimizing their operations. Whether it's designing intuitive dashboards, developing robust data models, leveraging cloud databases, or understanding and translating business requirements, 
+          I provide comprehensive solutions to drive business growth and efficiency.</p>
+      </div>
+      <div class="service-bottom">
+        <div class="service-item">
+          <div class="icon"><img src="https://img.icons8.com/?size=512&id=64191&format=png" /></div>
+          <h2>Reporting</h2>
+          <p>In the realm of reporting, I excel in creating impactful and visually appealing reports that present complex data in a clear and concise manner. By utilizing tools like Power BI and advanced reporting techniques, I transform raw data into meaningful insights that enable stakeholders to make informed decisions. With a keen eye for detail and a focus on user experience, 
+            I ensure that my reports provide actionable information and contribute to the organization's overall data-driven strategy.</p>
         </div>
-        <div class="section-title">Experience</div>
-        <div class="experience-item">
-          <h3>Front-end Developer, XYZ Company</h3>
-          <p>May 2018 - Present</p>
-          <ul>
-            <li>Developed responsive and visually appealing websites using HTML, CSS, and JavaScript.</li>
-            <li>Collaborated with the design team to implement UI/UX designs and ensure consistent branding across all web pages.</li>
-            <li>Optimized website performance by optimizing code, reducing page load times, and improving overall user experience.</li>
-            <li>Participated in code reviews and provided constructive feedback to peers to improve code quality and maintain coding standards.</li>
-          </ul>
+        <div class="service-item">
+          <div class="icon"><img src="https://img.icons8.com/?size=2x&id=JF0vEEJadHaW&format=png" /></div>
+          <h2>Data Modelling</h2>
+          <p>Data modelling is a crucial aspect of my services, where I design and develop robust data models that lay the foundation for efficient data analysis and reporting. Through a deep understanding of business processes and data relationships, I create logical and physical data models that optimize data storage, retrieval, and manipulation. By leveraging industry best practices and employing tools like SQL and data modeling software, I ensure that the data models I build are scalable, 
+            flexible, and aligned with the organization's data needs.</p>
         </div>
-        <div class="experience-item">
-          <h3>Web Designer, ABC Agency</h3>
-          <p>June 2016 - April 2018</p>
-          <ul>
-            <li>Designed and developed custom WordPress themes for clients, ensuring responsive and visually appealing designs.</li>
-            <li>Created and maintained client websites, performing updates and resolving issues as needed.</li>
-            <li>Collaborated with the marketing team to create landing pages and email templates for digital marketing campaigns.</li>
-            <li>Conducted usability testing and gathered feedback from clients to improve website functionality and user experience.</li>
-          </ul>
+        <div class="service-item">
+          <div class="icon"><img src="https://img.icons8.com/?size=512&id=64104&format=png" /></div>
+          <h2>Cloud Database</h2>
+          <p>With the advent of cloud computing, I specialize in leveraging cloud databases to unlock the full potential of data. By utilizing platforms like Amazon Web Services (AWS) or Microsoft Azure, I help organizations store, manage, and analyze their data in a secure and scalable environment. I design cloud database architectures that ensure data integrity, availability, and performance, 
+            enabling businesses to harness the power of the cloud and derive valuable insights from their data.</p>
         </div>
-        <div class="section-title">Education</div>
-        <div class="education-item">
-          <h3>Bachelor's Degree in Computer Science, University of Koblenz-Landau</h3>
-          <p>September 2012 - June 2016</p>
-          <ul>
-            <li>Studied computer science fundamentals, including algorithms, data structures, and web development.</li>
-            <li>Completed coursework in software engineering, database management, and user interface design.</li>
-            <li>Participated in team projects, developing web applications using various technologies and frameworks.</li>
-          </ul>
-        </div>
-        <div class="section-title">Skills</div>
-        <div class="skills">
-          <h3>Technical Skills</h3>
-          <ul>
-            <li>HTML5</li>
-            <li>CSS3</li>
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>WordPress</li>
-            <li>Adobe Photoshop</li>
-          </ul>
-        </div>
-        <div class="section-title">Additional Info</div>
-        <div class="additional-info">
-          <h3>Languages</h3>
-          <ul>
-            <li>English (Fluent)</li>
-            <li>German (Intermediate)</li>
-            <li>Bengali (Native)</li>
-          </ul>
+        <div class="service-item">
+          <div class="icon"><img src="https://img.icons8.com/?size=2x&id=113859&format=png" /></div>
+          <h2>Requirement Engineering</h2>
+          <p>Understanding and translating business requirements is a key aspect of my services as a BI/Data Analyst. Through effective requirement engineering, I collaborate closely with stakeholders to identify their needs, goals, and challenges. I employ methodologies such as interviews, workshops, and analysis techniques to gather comprehensive requirements that serve as the foundation for data analysis and reporting solutions. By bridging the gap between business and technology, I ensure that the solutions 
+            I deliver align with the organization's strategic objectives and drive measurable results.</p>
         </div>
       </div>
-</body> -->
+    </div>
+  </section>
+  <!-- End Service Section -->
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="projects container">
+      <div class="projects-header">
+        <h1 class="section-title">Recent <span>Projects</span></h1>
+      </div>
+      <div class="all-projects">
+        <div class="project-item">
+          <div class="project-info">
+            <h1>AI-COVID</h1>
+            <h2>An Agent Based Model</h2>
+            <p>The AI-COVID project focuses on utilizing agent-based modeling techniques to predict the spread of COVID-19 infections. By employing sophisticated artificial intelligence algorithms, this project provides valuable insights into the potential trajectory of the virus and aids decision-making for various stakeholders, including government healthcare authorities, healthcare providers, and citizens.
+
+              <!-- Through the agent-based model, the project simulates the behavior and interactions of individuals within a population, considering factors such as demographics, movement patterns, and social interactions. By incorporating real-time data and continuously updating the model, it generates predictions on the spread of infections under different scenarios and protective measures.
+              
+              The predictions generated by the AI-COVID project offer crucial information for decision-makers. Government healthcare authorities can leverage these insights to formulate effective policies and strategies to control the spread of the virus. Healthcare providers can optimize resource allocation and prepare for potential surges in hospitalizations, ensuring adequate medical care for patients. Citizens can make informed decisions about personal protective measures, such as social distancing and mask-wearing, based on the projected impact on infection spread.
+              
+              By providing a comprehensive understanding of the potential outcomes of different protective measures, the AI-COVID project enables stakeholders to proactively respond to the evolving pandemic situation. This data-driven approach empowers decision-makers with the knowledge needed to implement targeted interventions, allocate resources efficiently, and minimize the impact of the virus on public health and the economy.
+              
+              Overall, the AI-COVID project serves as a valuable tool in the fight against the pandemic, offering insights that can guide decision-making at various levels. By leveraging agent-based modeling and artificial intelligence, this project contributes to the collective effort to mitigate the spread of COVID-19 and protect the well-being of individuals and communities. -->
+            </p>
+          </div>
+          <div class="project-img">
+            <img src="./images/AI-COVID.jpeg" alt="img">
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-info">
+            <h1>Healthcare App for Enhanced Medical Services</h1>
+            <h2>Streamlining Access to Healthcare Services through an Android Health App</h2>
+            <p>The Android health app developed using Android Studio and a Cloud server is a comprehensive solution designed to provide users with a convenient and centralized platform for various healthcare-related needs. This app offers a wide range of features and functionalities to enhance the user experience and facilitate access to essential healthcare services.
+
+              <!-- One of the primary functionalities of the app is the ability for users to find doctor's appointments. This feature enables users to search for healthcare professionals based on their specialization, location, and availability. Users can easily book appointments, view doctor profiles, and access essential information such as qualifications, reviews, and ratings.
+              
+              Additionally, the app includes a feature to search for blood donors. Users can quickly search for potential blood donors in their vicinity based on blood type and availability. This functionality helps streamline the process of finding blood donors during emergencies or planned blood transfusions.
+              
+              Moreover, the app provides real-time information about blood availability at nearby blood banks. Users can easily check the availability of specific blood types and make informed decisions about accessing blood supplies. This feature proves to be particularly beneficial in critical situations where immediate access to blood can save lives.
+              
+              The app also allows users to register as blood donors, contributing to a larger blood donor database. By registering, users can offer their willingness to donate blood and receive notifications when their blood type is needed. This feature helps in building a robust network of blood donors and facilitates quick and efficient blood donation processes.
+              
+              Furthermore, the app offers online consultation and primary check-up services. Users can seek medical advice from healthcare professionals through secure and confidential online consultations. This feature eliminates the need for physical visits, especially for minor health concerns, and enables users to access healthcare services remotely.
+              
+              Overall, the Android health app developed using Android Studio and a Cloud server is a comprehensive and user-friendly solution that empowers individuals to manage their healthcare needs effectively. By integrating various functionalities, such as doctor appointment booking, blood donor search, blood availability tracking, blood donor registration, and online consultations, the app aims to provide a convenient and centralized platform for users to access essential healthcare services.             -->
+              </p>
+          </div>
+          <div class="project-img">
+            <img src="./images/Health-care app.png" alt="img">
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-info">
+            <h1>Project 3</h1>
+            <h2>Coding is Love</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
+              rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
+              harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
+          </div>
+          <div class="project-img">
+            <img src="./img/img-1.png" alt="img">
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-info">
+            <h1>Project 4</h1>
+            <h2>Coding is Love</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
+              rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
+              harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
+          </div>
+          <div class="project-img">
+            <img src="./img/img-1.png" alt="img">
+          </div>
+        </div>
+        <!-- <div class="project-item">
+          <div class="project-info">
+            <h1>Project 5</h1>
+            <h2>Coding is Love</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
+              rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
+              harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
+          </div>
+          <div class="project-img">
+            <img src="./img/img-1.png" alt="img">
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </section>
+  <!-- End Projects Section -->
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="about container">
+      <div class="col-left">
+        <div class="about-img">
+          <img src="./images/img4.png" alt="img">
+        </div>
+      </div>
+      <div class="col-right">
+        <h1 class="section-title">About <span>me</span></h1>
+        <h2>BI/Data Analyst</h2>
+        <p>Results-oriented Data Analyst with a comprehensive understanding of business processes and a passion for data analysis and visualization. 
+          Proven expertise in developing advanced reports and dashboards using PowerBI and Python. 
+          Skilled in data modeling, UI/UX design principles, and communicating insights to stakeholders. 
+          Seeking a forward-thinking and results-oriented Data Analyst role to contribute to the future Reporting and optimize processes.</p>
+        <a href="Mou_Saha_CV_1605.pdf" class="cta">Download Resume</a>
+      </div>
+    </div>
+  </section>
+  <!-- End About Section -->
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="contact container">
+      <div>
+        <h1 class="section-title">Contact <span>info</span></h1>
+      </div>
+      <div class="contact-items">
+        <div class="contact-item">
+          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/phone.png" /></div>
+          <div class="contact-info">
+            <h1>Phone</h1>
+            <h2>+49 1575 80768 78</h2>
+            <h2>+91 8189 8748 55</h2>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/new-post.png" /></div>
+          <div class="contact-info">
+            <h1>Email</h1>
+            <h2>mousaha695@gmail.com</h2>
+            <h2>msaha@uni-koblenz.de</h2>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/map-marker.png" /></div>
+          <div class="contact-info">
+            <h1>Address</h1>
+            <h2>Trierer Straße 327, Koblenz 56072, Germany</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Contact Section -->
+
+  <!-- Footer -->
+  <section id="footer">
+    <div class="footer container">
+      <div class="brand">
+        <h1><span>M</span>ou <span>S</span>aha</h1>
+      </div>
+      <h2>Your BI Consultant</h2>
+      <div class="social-icon">
+        
+        <div class="social-item">
+          <a href="https://github.com/Mou-Saha"><img src="https://img.icons8.com/?size=512&id=118553&format=png" /></a>
+        </div>
+        <div class="social-item">
+          <a href="https://www.linkedin.com/in/mou-saha-17070b111/"><img src="https://img.icons8.com/?size=512&id=108812&format=png" /></a>
+        </div>
+        <div class="social-item">
+          <a href="https://www.facebook.com/mou.saha.35"><img src="https://img.icons8.com/bubbles/100/000000/facebook-new.png" /></a>
+        </div>
+        <div class="social-item">
+          <a href="https://www.instagram.com/hi_its_mou/"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" /></a>
+        </div>
+      </div>
+      <p>Copyright © 2023 Mou Saha. All rights reserved</p>
+    </div>
+  </section>
+  <!-- End Footer -->
+  <script src="JS\app.js"></script>
+</body>
+
 </html>
